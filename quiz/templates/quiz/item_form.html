@@ -1,0 +1,84 @@
+{% extends 'goologin/login.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+        }
+
+        /* 라디오 버튼 가로축으로 늘어놓기 */
+        form ul > li {
+            display: inline-flex;
+        }
+
+        /* 퀴즈 마다 아래쪽 수평선  */
+        tr {
+            border-bottom: 5px solid rebeccapurple;
+        }
+
+    </style>
+</head>
+{% block content %}
+<body>
+    <div id="form_title">
+    <h1 class="menu_title">퀴즈 생성하기</h1>
+        <br/>
+
+        <P><span>|    </span>        출제자:<!--{{유저아이디}}--></P>
+        <br />
+    </div>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        Title: {{ form.title }} <br><br>
+        Username: {{ form.madeby }} <br><br>
+        <div id="quizbox">
+
+        <!-- 1번 문제  -->
+        Q1: {{form.Q1}} <br>
+        <div id="an"> {{form.Q1pic}} </div>
+        <hr>
+        </div>
+
+        <div id="quizbox">
+        <!-- 2번 문제  -->
+        Q2: {{form.Q2}} <br>
+            <div id="an">{{form.Q2pic}}</div>
+        <hr>
+        </div>
+
+        <div id="quizbox">
+        <!-- 3번 문제  -->
+        Q3: {{form.Q3}} <br>
+            <div id="an">{{form.Q3pic}}</div>
+        <hr>
+        </div>
+
+        <div id="quizbox">
+        <!-- 4번 문제  -->
+        Q4: {{form.Q4}} <br>
+            <div id="an">{{form.Q4pic}}</div>
+        <hr>
+        </div>
+
+        <div id="quizbox">
+        <!-- 5번 문제  -->
+        Q5: {{form.Q5}} <br>
+            <div id="an">{{form.Q5pic}}</div>
+        <hr>
+        </div>
+
+        <br/>
+        <input id="submit_btn" type="submit">
+    </form>
+
+</body>
+{% endblock %}
+</html>

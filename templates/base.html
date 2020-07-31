@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROGRAM QUIZ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav {
+            width: 100%;
+            height: 70px;
+            background-color: black;
+            float: left;
+        }
+
+        #nav h3 {
+            color: pink;
+            padding: 20px 0 0 50px;
+            float: left;
+        }
+
+        #nav div {
+            float: right;
+            color: white;
+            padding: 10px;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+
+        }
+
+        #body {
+            background-color: #222222;
+            width: 100%;
+            height: 57rem;
+            overflow: no-display;
+
+        }
+
+        #footer {
+            background-color: black;
+            width: 100%;
+            height: 4rem;
+        }
+
+        #footer h6 {
+            color: gray;
+            margin: 0 auto;
+            width: 350px;
+
+        }
+
+        #footer h5 {
+            width: 300px;
+            color: gray;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        {##body h1 {#}
+        {#    color: white;#}
+        {#    margin: 0 auto;#}
+        {#    width: 450px;#}
+        {#    text-align: center;#}
+        {#}#}
+
+        #main_title{
+            color: white;
+            margin: 0 auto;
+            width: 450px;
+            text-align: center;
+            padding-top: 350px;
+            padding-bottom: 80px;
+        }
+
+        #body a {
+            text-decoration: None;
+            color: pink;
+            border: 2px solid pink;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #quizbtn {
+            margin: 0 auto;
+            height: 0.01rem
+            width: 20rem;
+            text-align: center;
+
+        }
+
+        #quizbtn a{
+            float: bottom;
+        }
+
+        #quizbtn a:hover{
+            background-color: white;
+            opacity: 99%;
+            color: pink;
+        }
+
+
+        #context{
+            height: 57rem;
+
+        }
+
+        #list_title{
+            margin-left: 10rem;
+            margin-right: 10rem;
+            padding-top: 7rem;
+        }
+
+
+        #list_sub{
+            padding-top: 100px;
+            margin-left: 10rem;
+            margin-right: 10rem;
+        }
+        #list_sub h4{
+            font-size: 20px;
+            border-bottom: 2px solid pink;
+            margin-bottom: 10px;
+            padding-bottom: 30px;
+        }
+        #list_sub h4 span{
+            color: pink;
+        }
+
+        #list_sub .quiz{
+            color: pink;
+        }
+
+        #list_sub p{
+            width: 100px;
+
+            display: inline;
+        }
+
+        form ul > li {
+           display: inline-block;
+           margin-top: 30px;
+           margin-bottom: 30px;
+        }
+
+        form ul>li:nth-child(1){
+            display: none;
+        }
+
+        #submit_btn{
+            background-color: pink;
+            padding: 20px 70px 20px 70px;
+            margin-left: 42%;
+            border: none;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+        }
+
+        #submit_btn:hover{
+            background-color: white;
+            color: pink;
+        }
+
+
+
+        #form_title{
+            padding-top: 7rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
+
+        }
+
+
+        form{
+            margin-top: 2rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            color: pink;
+        }
+
+        #form_title p {
+            font-weight: 900;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid pink;
+        }
+
+        #form_title span {
+            color: pink;
+        }
+
+        #quizbox{
+            padding-bottom: 20px;
+
+
+        }
+        #an{
+            padding-left: 27px;
+            padding-top: 30px;
+        }
+
+
+
+
+
+
+
+
+        #body {
+            color: white;
+        }
+        #context{
+            height: 650px;
+        }
+
+        #quiz a{
+            float: right;
+            margin-right:
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="nav">
+    <a href="/"><h3>PROGRAM QUIZ</h3></a>
+    {% block login %}
+
+    {% endblock %}
+</div>
+
+<div id="body">
+
+    {% block content %}
+
+
+    {% endblock %}
+</div>
+<div id="footer">
+    <h5>피로그래밍 13기 | 박소민 손민주 오채은 이지호</h5>
+    <h6>서울특별시 관악구 관악로 1, 서울대학교 벤처경영 교육 및 연구 동아리</h6>
+</div>
+</body>
+</html>
